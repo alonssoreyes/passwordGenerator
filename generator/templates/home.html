@@ -1,0 +1,26 @@
+{% extends 'layout.html'%}
+{%block content%}
+<form action="{% url 'password' %}" class="w-50" id="form">
+    <h1>Password generator</h1>
+    <div class="form-group">
+        <label for="Length">Select password length</label>
+        <input type="number" class="form-control" name="length" id="length">
+    </div>
+
+    <div class="form-check mt-3">
+        <label for="uppercase" class="form-check-label">Uppercase</label>
+    <input type="checkbox" name="uppercase" id="uppercase" class="form-check-input">
+    </div>
+
+    <div class="form-check mt-3">
+        <label for="special" class="form-check-label">Special Chars</label>
+    <input type="checkbox" name="special" id="special" class="form-check-input">
+    </div>
+    <div class="form-check mt-3">
+        <label for="numbers" class="form-check-label">Numbers</label>
+    <input type="checkbox" name="numbers" id="numbers" class="form-check-input">
+    </div>
+
+    <button type="submit" class="btn btn-success">Generate</button>
+</form>
+{% endblock %}
